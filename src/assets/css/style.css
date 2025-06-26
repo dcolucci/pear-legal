@@ -1,10 +1,11 @@
 :root {
-    --background-color: #f9f4eb;
+    --primary-color-brand-1: #653614;
+    --primary-color-brand-2: #f9f4eb;
 }
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--background-color);
+    background-color: var(--primary-color-brand-2);
 }
 
 body {
@@ -20,7 +21,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--background-color);
+    background: var(--primary-color-brand-2);
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -53,7 +54,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #653614;
+    color: var(--primary-color-brand-1);
 }
 
 section {
