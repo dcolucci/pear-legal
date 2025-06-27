@@ -66,12 +66,6 @@ h1 {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-}
-
 .site-footer {
     background-color: var(--primary-color-brand-2);
     color: var(--primary-color-brand-1);
@@ -85,4 +79,48 @@ h1 {
     border: none;
     border-top: 1px solid var(--primary-color-brand-1);
     margin: 0 0 0 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-headshot {
+    max-width: 40vw;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.about-text {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-headshot {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        order: 1;
+    }
 } 
