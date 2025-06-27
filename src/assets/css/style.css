@@ -1,6 +1,7 @@
 :root {
     --primary-color-brand-1: #653614;
     --primary-color-brand-2: #f9f4eb;
+    --primary-color-brand-3: #191970;
 }
 
 html {
@@ -13,7 +14,13 @@ body {
     margin: 0;
 }
 
+a {
+    color: var(--primary-color-brand-3);
+    text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color-brand-3);
     font-family: 'Poppins', Arial, sans-serif;
 }
 
