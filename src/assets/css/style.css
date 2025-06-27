@@ -108,6 +108,33 @@ h1 {
     flex: 1;
 }
 
+.services-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.service-column {
+    flex: 1 1 0;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.25rem;
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -140,31 +167,4 @@ h1 {
         max-width: 100%;
         width: 100%;
     }
-}
-
-.services-columns {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 2.5rem;
-}
-
-.service-column {
-    flex: 1 1 0;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.service-icon {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 1.25rem;
 }
