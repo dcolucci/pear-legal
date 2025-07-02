@@ -1,5 +1,6 @@
 :root {
     --primary-color-brand-1: #653614;
+    --secondary-color-brand-1: #321b0a;
     --primary-color-brand-2: #f9f4eb;
     --primary-color-brand-3: #191970;
 }
@@ -12,6 +13,7 @@ html {
 body {
     font-family: 'Source Sans 3', Arial, sans-serif;
     margin: 0;
+    color: var(--secondary-color-brand-1);
 }
 
 a {
@@ -22,6 +24,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', Arial, serif;
     text-align: center;
+    color: var(--primary-color-brand-1);
 }
 
 nav {
@@ -133,6 +136,7 @@ h1 {
     width: 56px;
     height: 56px;
     margin-bottom: 1.25rem;
+    color: var(--primary-color-brand-1);
 }
 
 @media (max-width: 768px) {
