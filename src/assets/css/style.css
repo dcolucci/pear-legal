@@ -46,7 +46,7 @@ h3 {
 }
 
 section {
-    padding: 6rem 2rem 2rem;
+    padding: 4rem 2rem 2rem;
 }
 
 .site-container {
@@ -201,7 +201,6 @@ nav a {
  *******************************************/
 .hero-section {
     width: 100%;
-    padding: 6rem 0 4rem 0;
     display: flex;
     align-items: center;
     min-height: 340px;
@@ -229,6 +228,10 @@ nav a {
         display: none;
     }
 
+    section {
+        padding: 2rem 0 0 0;
+    }
+
     .about-content {
         flex-direction: column;
         align-items: stretch;
@@ -254,11 +257,10 @@ nav a {
     }
     .service-column {
         max-width: 100%;
-        width: 100%;
     }
 
     .hero-section {
-        padding: 3rem 0 2rem 0;
+        padding: 5rem 0 2rem 0;
         min-height: 180px;
         border-radius: 0 0 1rem 1rem;
     }
