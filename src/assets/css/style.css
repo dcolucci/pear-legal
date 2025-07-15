@@ -1,3 +1,6 @@
+/*******************************************
+ * Section: Variables
+ *******************************************/
 :root {
     --primary-color-brand-1: #653614;
     --secondary-color-brand-1: #321b0a;
@@ -5,6 +8,9 @@
     --primary-color-brand-3: #191970;
 }
 
+/*******************************************
+ * Section: Baseline styles
+ *******************************************/
 html {
     scroll-behavior: smooth;
     background-color: var(--primary-color-brand-2);
@@ -25,6 +31,10 @@ h1, h2, h3 {
     color: var(--primary-color-brand-1);
 }
 
+h1 {
+    margin-bottom: 2rem;
+}
+
 h2 {
     font-family: 'Libre Baskerville', Arial, serif;
     text-align: center;
@@ -35,6 +45,44 @@ h3 {
     font-family: 'Raleway', Arial, sans-serif;
 }
 
+section {
+    padding: 6rem 2rem 2rem;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.wave {
+    --size: 12px;
+    --b: 5px;
+    --m: 0.5;
+    --p: calc(var(--m)*var(--size));
+    --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    --_g: #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
+    mask:
+      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--p)),var(--_g))
+        calc(50% - 2*var(--size)) calc(50% - var(--size)/2 - var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b)) repeat-x,
+      radial-gradient(var(--R) at left 50% top    calc(-1*var(--p)),var(--_g))
+        50%                       calc(50% + var(--size)/2 + var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b)) repeat-x;
+    background: var(--primary-color-brand-3);
+    height: 50px;
+
+    /**
+     * Unsure if this is the "right" solution, but the mask attribute was
+     * causing the wave elements to be stacked on top of the nav bar.
+     * Positioning these elements and adding z-index seems to solve.
+     */
+    position: relative;
+    z-index: -1;
+  }
+
+/*******************************************
+ * Section: Nav
+ *******************************************/
 nav {
     position: fixed;
     top: 0;
@@ -76,14 +124,9 @@ nav a {
     color: var(--primary-color-brand-1);
 }
 
-section {
-    padding: 6rem 2rem 2rem;
-}
-
-h1 {
-    margin-bottom: 2rem;
-}
-
+/*******************************************
+ * Section: Footer
+ *******************************************/
 .site-footer {
     background-color: var(--primary-color-brand-2);
     color: var(--primary-color-brand-1);
@@ -99,6 +142,9 @@ h1 {
     margin: 0 0 0 0;
 }
 
+/*******************************************
+ * Section: About
+ *******************************************/
 .about-content {
     display: flex;
     flex-direction: row;
@@ -119,6 +165,9 @@ h1 {
     flex: 1;
 }
 
+/*******************************************
+ * Section: Services
+ *******************************************/
 .services-columns {
     display: flex;
     flex-direction: row;
@@ -147,6 +196,34 @@ h1 {
     color: var(--primary-color-brand-1);
 }
 
+/*******************************************
+ * Section: Hero
+ *******************************************/
+.hero-section {
+    width: 100%;
+    padding: 6rem 0 4rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 340px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-headline {
+    font-family: 'Libre Baskerville', Arial, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/*******************************************
+ * Section: Mobile styles
+ *******************************************/
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -179,65 +256,7 @@ h1 {
         max-width: 100%;
         width: 100%;
     }
-}
 
-.site-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.hero-section {
-    width: 100%;
-    padding: 6rem 0 4rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 340px;
-    margin-bottom: 2rem;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hero-headline {
-    font-family: 'Libre Baskerville', Arial, serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    letter-spacing: 0.01em;
-}
-
-.wave {
-    --size: 12px;
-    --b: 5px;
-    --m: 0.5;
-    --p: calc(var(--m)*var(--size));
-    --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
-    --_g: #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
-    mask:
-      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--p)),var(--_g))
-        calc(50% - 2*var(--size)) calc(50% - var(--size)/2 - var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b)) repeat-x,
-      radial-gradient(var(--R) at left 50% top    calc(-1*var(--p)),var(--_g))
-        50%                       calc(50% + var(--size)/2 + var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b)) repeat-x;
-    background: var(--primary-color-brand-3);
-    height: 200px;
-
-    /**
-     * Unsure if this is the "right" solution, but the mask attribute was
-     * causing the wave elements to be stacked on top of the nav bar.
-     * Positioning these elements and adding z-index seems to solve.
-     */
-    position: relative;
-    z-index: -1;
-  }
-
-@media (max-width: 600px) {
     .hero-section {
         padding: 3rem 0 2rem 0;
         min-height: 180px;
