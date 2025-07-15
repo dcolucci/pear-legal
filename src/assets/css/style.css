@@ -125,50 +125,33 @@ nav a {
 }
 
 /*******************************************
- * Section: Footer
+ * Section: Hero
  *******************************************/
-.site-footer {
-    background-color: var(--primary-color-brand-2);
-    color: var(--primary-color-brand-1);
-    text-align: left;
-    padding: 2rem 1rem;
-    font-size: 1rem;
-    margin-top: 0;
-}
-
-.footer-divider {
-    border: none;
-    border-top: 1px solid var(--primary-color-brand-1);
-    margin: 0 0 0 0;
-}
-
-/*******************************************
- * Section: About
- *******************************************/
-.about-content {
+ .hero-section {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-top: 2rem;
+    align-items: center;
+    min-height: 340px;
 }
 
-.about-headshot {
-    max-width: 40vw;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.hero-content {
+    width: 100%;
+    max-width: 900px;
 }
 
-.about-text {
-    flex: 1;
+.hero-headline {
+    font-family: 'Libre Baskerville', Arial, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 0.01em;
 }
 
 /*******************************************
  * Section: Services
  *******************************************/
-.services-columns {
+ .services-columns {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -197,27 +180,44 @@ nav a {
 }
 
 /*******************************************
- * Section: Hero
+ * Section: About
  *******************************************/
-.hero-section {
-    width: 100%;
+.about-content {
     display: flex;
-    align-items: center;
-    min-height: 340px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.hero-content {
-    width: 100%;
-    max-width: 900px;
+.about-headshot {
+    max-width: 40vw;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.hero-headline {
-    font-family: 'Libre Baskerville', Arial, serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    letter-spacing: 0.01em;
+.about-text {
+    flex: 1;
+}
+
+/*******************************************
+ * Section: Footer
+ *******************************************/
+ .site-footer {
+    background-color: var(--primary-color-brand-2);
+    color: var(--primary-color-brand-1);
+    text-align: left;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid var(--primary-color-brand-1);
+    margin: 0 0 0 0;
 }
 
 /*******************************************
