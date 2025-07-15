@@ -185,13 +185,14 @@ nav a {
 .about-content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .about-headshot {
-    max-width: 40vw;
+    max-width: 380px;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -199,6 +200,7 @@ nav a {
 }
 
 .about-text {
+    max-width: 450px;
     flex: 1;
 }
 
@@ -240,6 +242,7 @@ nav a {
 
     .about-text {
         order: 2;
+        max-width: initial;
     }
 
     .about-headshot {
