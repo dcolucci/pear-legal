@@ -225,6 +225,86 @@ nav a {
 }
 
 /*******************************************
+ * Section: Contact Form
+ *******************************************/
+#formspree-contact {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    max-width: 480px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#formspree-contact label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: var(--primary-color-brand-1);
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+#formspree-contact input[type="email"],
+#formspree-contact textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--primary-color-brand-1);
+    border-radius: 6px;
+    background: #f9f4eb;
+    color: var(--secondary-color-brand-1);
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+#formspree-contact input[type="email"]:focus,
+#formspree-contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color-brand-3);
+    background: #fff;
+}
+
+#formspree-contact textarea {
+    min-height: 120px;
+    max-height: 320px;
+}
+
+#formspree-contact button[type="submit"] {
+    background: var(--primary-color-brand-1);
+    color: #fff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    padding: 0.85rem 0;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: background 0.2s, color 0.2s;
+}
+
+#formspree-contact button[type="submit"]:hover,
+#formspree-contact button[type="submit"]:focus {
+    background: var(--primary-color-brand-3);
+    color: #fff;
+}
+
+#formspree-status {
+    min-height: 1.5em;
+    font-size: 1rem;
+    color: var(--primary-color-brand-3);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/*******************************************
  * Section: Mobile styles
  *******************************************/
 @media (max-width: 768px) {
@@ -271,5 +351,23 @@ nav a {
     }
     .hero-headline {
         font-size: 1.4rem;
+    }
+
+    #formspree-contact {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        max-width: 100%;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    #formspree-contact label {
+        font-size: 1rem;
+    }
+    #formspree-contact input[type="email"],
+    #formspree-contact textarea {
+        font-size: 1rem;
+        padding: 0.65rem 0.7rem;
+    }
+    #formspree-contact button[type="submit"] {
+        font-size: 1rem;
+        padding: 0.7rem 0;
     }
 }
