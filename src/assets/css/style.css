@@ -50,6 +50,13 @@ section {
     padding: 4rem 2rem 2rem;
 }
 
+hr {
+    background-color: var(--primary-color-brand-3);
+    height: 2px;
+    border-radius: 3px;
+    border-color: var(--primary-color-brand-3);
+}
+
 .site-container {
     max-width: 1200px;
     margin: 0 auto;
