@@ -304,11 +304,31 @@ nav a {
 }
 
 #formspree-status {
-    min-height: 1.5em;
+    min-height: 0;
+    height: 0;
     font-size: 1rem;
     color: var(--primary-color-brand-3);
-    margin-top: 0.5rem;
+    margin: 0;
     text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#formspree-status:not(:empty) {
+    min-height: 1.5em;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+/* Hide form elements when form is submitted successfully */
+#formspree-contact.form-submitted label,
+#formspree-contact.form-submitted button[type="submit"] {
+    display: none;
+}
+
+#formspree-contact.form-submitted {
+    text-align: center;
+    padding: 2rem;
 }
 
 /*******************************************

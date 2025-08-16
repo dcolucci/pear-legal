@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 status.innerHTML = "Thanks for your submission!";
                 form.reset();
+                form.classList.add('form-submitted');
             } else {
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
